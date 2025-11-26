@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="tematica.css">
+    <link rel="html" href="code.html">
+    <link rel="html" href="aventura.html">
+    <title>lets play poison web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      h1{
+        color:azure;
+      }
+
+      h4{
+        color: azure;
+      }
+
+      h6{
+        color: azure;
+      }
+    </style>
+  </head>
+
+<body>
+    <main>
+         <h1 class = "px-4 py-4 text-center">detras de la aventura gráfica</h1>
+             <div class = "container">
+        <p class="text-center" style="color: azure;">trabajo práctico final web</p>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navpoison" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">poison bar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">principal</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="code.html">estructura</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="aventura.html">aventura interactiva</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="py-5 col-md-11 col-sm-11">
+<h4>¿que hay detrás de esta aventura?</h4>
+<h6>¿quieres ver el proceso general de producción? no te preocupes, aquí te mostramos partes relevantes del código que le dió vida, cuerpo y alma a la AGIW, desde las mismas diapositivas hasta estructuras de la interacción, acercate y descúbrelo.</h6>
+</div>
+
+<div class="card col-md-10 col-sm-11" data-bs-theme="dark">
+  <img src="tpf3images/d4.webp" class="card-img-top" alt="imágen de tarjeta 2">
+  <div class="card-body">
+    <h5 class="card-title">contenido de cada diapositiva</h5>
+    <p class="card-text">pst! ey toma está carta que te da un breve ejemplo de como se programó el contenido de las diapositivas</p>
+    <p><code>if(diapositiva === "b1"){
+      image(screens[6], 0, 0);
+      fill(0, 150);
+      rect(80, 300, 460, 100, 10);
+      fill(255);
+      text(phrases[6], 90, 310, 440, 80);
+      botton(100, 400, 110, 50, "siguiente");
+    }
+    </code></p>
+
+    <p><code>if(diapositiva === "b2"){
+     image(screens[7], 0, 0);
+     fill(0, 150);
+     rect(80, 300, 460, 100, 10);
+     fill(255);
+     text(phrases[7], 90, 310, 440, 80);
+     botton(75, 400, 160, 50, "se queda en el pueblo");
+     botton(330, 400, 170, 50, "se muda a otro pueblo");
+    }
+    </code>
+    </p>
+  </div>
+</div>
+
+<div class="py-5 col-md-11 col-sm-11">
+<h4>estamos llegando mas profundo</h4>
+<h6>esta exploración está valiendo la pena. ahora descubriremos juntos como se creó la interacción y los condicionales que permiten el cambio de estado a la pantalla siguiente y/ opciones para explorar la AGIW </h6>
+</div>
+
+<div class="card col-md-10 col-sm-11" data-bs-theme="dark">
+  <div class="card-body">
+    <h5 class="card-title">sonido y música</h5>
+    <p class="card-text">la música empieza cuando tocas el botón 'comenzar' y te sumerge durante toda la aventura. <code>let musica;</code></p>
+    <p class="card-text">el efecto de sonido suena cada vez que das click en la pantalla y/o en los botones. <code> let sfx;</code></p>
+  </div>
+  <img src="tpf3images/c2.webp" class="card-img-bottom" alt="imágen de la tarjeta 3">
+</div>
+
+<div class="accordion col-md-10 col-sm-11" id="accordionExample" data-bs-theme="dark">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        arreglo de textos
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>te dejamos algunas de las frases que usamos para el arreglo de textos
+        <code>let phrases = []</code> haciendo 25 textos (de 0 a 24) en total.</strong>
+        <div>inicio: 'bienvenidos' phrases [0]</div>
+        <div>rama principal 1: 'el sr howard mira a los niños arrojar a michael por la ventana y decide no volver a dar clases nunca más' phrases [1]</div>
+        <div>rama A2: 'los alumnos ven al señor howard regresando al salón' phrases [4]</div>
+        <div>rama E1: 'enferma y no puede pagar sus medicinas, por lo que su salud empeora' phrases[14]</div>
+        <div>rama H3: 'muere debido a los golpes recibidos por la familia de la niña' phrases [23]</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        arreglo de imágenes
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>el segundo y último arreglo que usamos fue el de las diapositivas, esas que cuando tocas el botón te permite avanzaren cada una <code>let screens = [];</code></strong> 
+        <div>algunos ejemplos</div>
+        <div>inicio: image(screens[0], 0, 0);</div>
+        <div>rama d1: image(screens[10], 0, 0);</div>
+        <div>rama g2: image(screens[19], 0, 0);</div>
+        <div>rama h3: image(screens[23], 0, 0);</div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        avance de diapositivas
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>la interacción funciona por sistema de botones. el botón izquierdo hace el rol de 'siguiente' y de 'primera opción', cuando hay una bifurcación aparece el botón derecho y como 'segunda opción'</strong> 
+        <img src="tpf3images/codebutton.webp" alt="" width="80%">
+        <div>esto es un ejemplo de lo que pasa cuando das click y pasa a la sigiente diapositiva (con la función mouseClicked)</div>
+        <code>  if (diapositiva === "inicio" && tap(100, 400, 110, 50)){
+          diapositiva = "1";
+        }
+       </code>
+       <div>y de esta manera esta programada la acción de bifurcación</div>
+       <code>  else if (diapositiva === "2" && tap(100, 400, 110, 50)) {
+        diapositiva = "a1";
+      }
+      else if (diapositiva === "2" && tap(360, 400, 110, 50)){ 
+        diapositiva = "b1";
+      }
+      </code>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="py-5 col-md-12 col-sm-12 g-5">
+    <h4>resumiendo</h4>
+    <h6>lo que has descubierto fue el mismisimo cuerpo, cerebro y corazón que hicieron posible la emocionante AGIW en la que podrás acceder tocando el botón "aventura interactiva" del poison bar. descubriste la interfáz del mouseClicked, el contenido de cada diapositiva programado y como fueron diseñados los botones tanto para avanzar como para elegir destinos</h6>
+    <a class="btn btn-primary" href="#navpoison" role="button">ir al poison bar</a>
+</div>
+
+<footer class="px-3 py-4">
+  <h6>sitio web del trabajo práctico final</h6>
+</footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>
